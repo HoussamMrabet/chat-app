@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=quicksand@600,700,400,300,500&display=swap" rel="stylesheet">
+  <style>
+    .font-quick {
+      font-family: 'Quicksand', sans-serif !important;
+    }
+  </style>
+</head>
+
+<body class=" font-quick  w-full h-screen flex flex-col items-center justify-center px-28 py-12 bg-gray-50 ">
+  <div class="container">
+    <% if (messages.error) { %>
+      <div style="background-color: red;">
+        <strong>
+          <%= messages.error %>
+        </strong>
+      </div>
+      <% } %>
+        <!-- <h2>Login</h2>
+        <form action="/login" method="post">
+          Username or Email Input -->
+        <!-- <label for="username"> Email Adress:</label>
+          <input type="email"  name="email" id="form3Exemple3"  class="form-control"> -->
+
+        <!-- Password Input -->
+        <!-- <label for="password">Password:</label>
+          <input type="password"  name="password" id="form3Exemple4"  class="form-control" >
+    
+        
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account yet? <a href="/Register">Register here</a></p> -->
+  </div>
+
+  <!-- Partier of salma--------------------------->
+
+  <!-- todo Login Section Start -->
+  <div class="w-full h-full bg-gradient-to-br from-[#304CD5] via-[#C743AF] to-[#C743AF] shadow-lg rounded flex">
+    <div class="w-4/12 h-full py-8 pl-8 pr-4 relative">
+
+      <!-- todo Logo Start -->
+      <img src="assets/logo-t2.png" class="h-[13%] w-auto"></img>
+      <!-- todo Logo End -->
+
+      <!-- todo Text Part -->
+      <h3 class="text-gray-50 font-quick mt-10 text-2xl tracking-wide font-Quicksand">
+        Step into a world of instant connections with Vibegram.
+      </h3>
+
+      <!-- todo Absolute Image -->
+      <img src="assets/spin.png" alt="" class="absolute h-[66%] w-auto bottom-0 -right-24 top-[16rem]" />
+    </div>
+
+    <!-- todo Form Start -->
+    <div class="bg-white w-8/12 h-full rounded-l-[40px] py-20 px-40">
+      <div class="w-full h-full">
+        <div class="">
+          <% if (messages.error) { %>
+            <div style="background-color: red;">
+              <strong>
+                <%= messages.error %>
+              </strong>
+            </div>
+            <% } %>
+              <h2 class="font-bold text-3xl text-slate-800"> Sign In here </h2>
+              <div class="flex gap-x-8 mt-10">
+
+                <!-- todo: Button One -->
+                <button
+                  class="bg-white border py-2 rounded-md w-full flex justify-center items-center gap-x-2 hover:shadow transition-all duration-300">
+                  <span>
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt=""
+                      class="w-8 h-auto" />
+                  </span>
+                  <span class="text-gray-500 text-sm tracking-tight">sign up with Google</span>
+                </button>
+
+                <!-- todo: Button Two -->
+                <button
+                  class="bg-white border py-2 rounded-md w-full flex justify-center items-center gap-x-2 hover:shadow transition-all duration-300">
+                  <span>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+                      alt="" class="w-6 h-auto" />
+                  </span>
+                  <span class="text-gray-500 text-sm tracking-tight">sign In with Facebook</span>
+                </button>
+              </div>
+        </div>
+
+        <!-- todo OR Part -->
+        <div class="w-full flex justify-center items-center relative mt-10">
+          <h2 class="bg-white z-10 px-1 text-gray-400">OR</h2>
+          <div class="w-12 h-0.5 bg-gray-400 absolute z-0"></span>
+          </div>
+        </div>
+
+
+        <!-- *Credentials Start -->
+        <!-- todo Full name Input Start -->
+
+
+
+        <!-- todo Email Address Input Start -->
+
+
+        <form action="/login" method="POST">
+
+
+
+
+          <!-- todo Email Address Input Start -->
+          <div class="w-full mx-auto mt-7 border-b-2">
+            <label for="Email" class="block text-sm font-medium text-gray-500"></label>
+            <div class="mt-1 ">
+              <input type="email" id="email" name="email"
+                class="block w-full pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="Email Address">
+            </div>
+          </div>
+
+          <!-- todo Password Input Start -->
+          <div class="w-full mx-auto mt-7 border-b-2">
+            <label id="Password" class="block text-sm font-medium  text-gray-500"></label>
+            <div class="mt-1 ">
+              <input type="password" id="password" name="password"
+                class="block w-full pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="Password">
+            </div>
+          </div>
+
+          <!-- *Credentials End -->
+
+          <!--todo Create Account Button -->
+          <div class="mt-10">
+            <button type="submit"
+              class="bg-[#C743AF] py-2 rounded-md w-full h-max flex justify-center items-center gap-x-2 font-bold text-gray-50 hover:shadow transition-all duration-300">
+              Sign in </button>
+          </div>
+        </form>
+        <!--todo Already have an Account -->
+        <div class="flex flex-row w-max mt-2">
+          <h2 class="text-gray-400">
+            Don't have an account?
+          </h2>
+          <p class="text-[#C743AF] font-bold ml-1">Don't have an account yet? <a href="/register">Register here</a></p>
+        </div>
+      </div>
+      <!-- Form End -->
+    </div>
+    <!-- Login Section End -->
+
+
+
+
+
+
+
+</body>
+
+</html>

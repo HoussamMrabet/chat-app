@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeGram</title>
+    <link rel="stylesheet" href="/assets/Quicksand_Complete/Fonts/WEB/css/quicksand.css">
+    <script src="https://kit.fontawesome.com/04bf1872c5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            text-decoration: none;
+            list-style-type: none;
+            text-decoration: none;
+            font-family: 'Quicksand-Light';
+        }
+
+        :root {
+            --darkBlue: #1D203E;
+            --darkGrey: #2C2F48;
+            --gradientBlue: #314BD5;
+            --gradientCyan: #27DCE5;
+            --lighPink: #C743AF;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        :root {
+            --darkBlue: #1D203E;
+            --darkGrey: #2C2F48;
+            --gradientBlue: #314BD5;
+            --gradientCyan: #27DCE5;
+            --lighPink: #C743AF;
+            --myWhite: #ffffff;
+        }
+
+        .mainContainer {
+            position: relative;
+            width: 99%;
+            height: 98%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .mainContainer::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            background: linear-gradient(130deg, var(--lighPink), var(--gradientBlue));
+            clip-path: polygon(50% 0, 0 0, 0 100%, 100% 100%);
+        }
+
+        .mainContainer section {
+            position: relative;
+            overflow: hidden;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            padding: 0px 10px;
+
+        }
+
+        .mainContainer section::before {
+            position: absolute;
+            content: "";
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+            z-index: -2;
+            border-radius: 25px;
+        }
+
+        .mainContainer section h1 {
+            font-size: 40px;
+            color: var(--myWhite);
+
+        }
+
+        .mainContainer section .slogan {
+            line-height: 75px;
+        }
+
+        .mainContainer section .slogan h2 {
+            font-size: 65px;
+            color: var(--myWhite);
+
+        }
+
+        .mainContainer section .description {
+            position: relative;
+        }
+
+        .mainContainer section .description p {
+            line-height: 30px;
+            color: var(--myWhite);
+            margin: 2px 0px;
+            font-weight: 600;
+
+        }
+
+        .mainContainer section .ratings {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .mainContainer section .install {
+            display: flex;
+
+        }
+
+        .mainContainer aside {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            border: 1px solid var(--gradientBlue);
+            padding: 10px 15px;
+            background-color: var(--gradientBlue);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin: 0px 10px;
+            transition: all .4s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #314BD5;
+            border: 1px solid var(--gradientBlue);
+
+        }
+
+        .join {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="mainContainer">
+            <img src="/assets/tweet.png"
+                style="width: 25%; height: auto; position: absolute; top: 0; left: 0; z-index: -2;">
+            <img src="/assets/laptop.png"
+                style="width: 25%; height: auto; position: absolute; bottom: 0; left: 35%; z-index: -2;">
+            <section>
+                <div class="header"
+                    style="width: 100%;display: flex; align-items: center; justify-content: space-between;">
+                    <h1>VibeGram</h1>
+                    <div class="btnJoin">
+                    </div>
+                </div>
+                <div class="slogan">
+                    <h2>Connecting Vibes,<h2>
+                            <h2>One Message at a Time,</h2>
+                            <h2>VibeGram Unleashed.</h2>
+                </div>
+                <div class="description">
+                    <p>Where every message becomes a melodic note, weaving harmonious conversations.</p>
+                    <p>Immerse yourself in a symphony of connections, transcending words into a rhythmic dialogue.</p>
+                    <p>Experience the cadence of communication, where each interaction resonates with the pulse of</p>
+                    <p>genuine connections. Join VibeGram and turn every chat into a harmonious experience.</p>
+
+                </div>
+
+                <div class="install">
+                    <button class="btn">Download for Windows<i class="fa-brands fa-windows"
+                            style="font-size: 25px; margin-left: 8px;"></i></button>
+                    <button class="btn">Download for Ios<i class="fa-brands fa-apple"
+                            style="font-size: 25px; margin-left: 8px;"></i></button>
+                </div>
+            </section>
+            <aside>
+                <button class="btn join" id="joinBtn">Join the VibeGram</button>
+                <img src="/assets/phoneScreen.png" style="width: 100%; height: auto;">
+            </aside>
+        </div>
+    </main>
+    <script>
+        // GSAP animations
+        gsap.to(".header", { duration: 2, opacity: 1, y: 0, ease: "power2.out" });
+        gsap.to(".slogan h2", { duration: 2, opacity: 1, y: 0, stagger: 0.3, ease: "power2.out" });
+        gsap.to(".description p", { duration: 2, opacity: 1, y: 0, stagger: 0.2, ease: "power2.out" });
+        gsap.to(".install button", { duration: 2, opacity: 1, y: 0, stagger: 0.3, ease: "power2.out" });
+        gsap.to(".join", { duration: 1, opacity: 2, x: 0, ease: "power2.out" });
+        gsap.from(".mainContainer img", { duration: 2, opacity: 0, scale: 0.5, ease: "power2.out", stagger: 0.5 });
+
+        // Add more animations as needed
+        gsap.from("main", { duration: 1.5, opacity: 0, scale: 0.8, ease: "power2.out" });
+        gsap.from("aside", { duration: 1.5, opacity: 0, x: 20, ease: "power2.out" });
+        // Trigger animations on scroll or load as necessary
+    </script>
+    <script>
+        document.getElementById("joinBtn").addEventListener("click", function () {
+            // Redirect to the registration page
+            window.location.href = "/Register";
+        });
+
+    </script>
+
+</body>
+
+</html>
